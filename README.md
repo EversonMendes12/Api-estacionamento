@@ -7,6 +7,7 @@
 ### Características:
 
 Sistema possuí um Launcher para atualizações.
+
 ![Launcher](https://user-images.githubusercontent.com/13875554/171409364-706fe611-987b-4582-8e18-c7a69821f2e5.PNG)
 
 
