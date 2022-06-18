@@ -8,12 +8,15 @@
 
 Sistema possuí um Launcher para atualizações.
 
-![Launcher](https://user-images.githubusercontent.com/13875554/171409364-706fe611-987b-4582-8e18-c7a69821f2e5.PNG)
+![image](https://user-images.githubusercontent.com/13875554/174421502-74f68c72-d6bc-41ac-9605-3fbad8a29791.png)
 
+Tela de login:
+
+![image](https://user-images.githubusercontent.com/13875554/174421545-038eb15d-3c49-4493-8b26-209a2fee3d58.png)
 
 Designer Main:
 
-![Main](https://user-images.githubusercontent.com/13875554/171409840-ce6c98f4-a1ca-46f4-aa1c-750598bc4586.PNG)
+![Uploading image.png…]()
 
 
 
