@@ -19,10 +19,10 @@ import java.util.logging.Logger;
  */
 public class ConnectionFactory02 {
     
-    public static final String conn = "jdbc:mysql://localhost:3306/concessionaria?zeroDateTimeBehavior=convertToNull";
+    public static final String conn = "jdbc:mysql://localhost:3306/DbPerfectParking?zeroDateTimeBehavior=CONVERT_TO_NULL";
     public static final String USUARIO = "root";
     public static final String SENHA = "";
-    public static final String DRIVER = "com.mysql.jdbc.Driver";
+    public static final String DRIVER = "com.mysql.cj.jdbc.Driver";
     
     
     

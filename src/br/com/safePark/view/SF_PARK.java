@@ -6,6 +6,7 @@
 package br.com.safePark.view;
 
 import br.com.safePark.factory.ConnectionFactory02;
+import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -83,23 +84,16 @@ public class SF_PARK extends javax.swing.JFrame {
         jButton4 = new JButton();
         jButton8 = new JButton();
         jDesktopPane = new JDesktopPane();
-        btnAtualizar = new JButton();
-        btnAtulizar1 = new JButton();
-        jPanel3 = new JPanel();
+        jLabel5 = new JLabel();
         jButton13 = new JButton();
         jButton14 = new JButton();
         jButton15 = new JButton();
         jButton9 = new JButton();
-        jLabel4 = new JLabel();
-        jSeparator3 = new JSeparator();
-        jSeparator7 = new JSeparator();
-        jLabel6 = new JLabel();
-        jLabel7 = new JLabel();
         jButton11 = new JButton();
-        jSeparator4 = new JSeparator();
-        jSeparator5 = new JSeparator();
-        jLabel5 = new JLabel();
-        jSeparator6 = new JSeparator();
+        jLabel3 = new JLabel();
+        jLabel8 = new JLabel();
+        btnAtualizar = new JButton();
+        jLabel2 = new JLabel();
 
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("SF PARK ESTACIONAMENTO");
@@ -107,6 +101,7 @@ public class SF_PARK extends javax.swing.JFrame {
         setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
         setLocation(new Point(10, 10));
         setResizable(false);
+        getContentPane().setLayout(null);
 
         jPanel1.setBorder(BorderFactory.createTitledBorder(null, "NAVEGAR:", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, new Font("Tahoma", 1, 12))); // NOI18N
         jPanel1.setEnabled(false);
@@ -200,50 +195,37 @@ public class SF_PARK extends javax.swing.JFrame {
                 .addComponent(jButton2)
                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton4)
-                .addGap(65, 65, 65))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
-        btnAtualizar.setFont(new Font("Tahoma", 1, 10)); // NOI18N
-        btnAtualizar.setText("ATUALIZAR ESTOQUE");
-        btnAtualizar.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                btnAtualizarActionPerformed(evt);
-            }
-        });
-
-        btnAtulizar1.setFont(new Font("Tahoma", 1, 10)); // NOI18N
-        btnAtulizar1.setText("ATUALIZAR ESTOQUE");
-        btnAtulizar1.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                btnAtulizar1ActionPerformed(evt);
-            }
-        });
-
-        jDesktopPane.setLayer(btnAtualizar, JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane.setLayer(btnAtulizar1, JLayeredPane.DEFAULT_LAYER);
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(20, 90, 220, 480);
 
         GroupLayout jDesktopPaneLayout = new GroupLayout(jDesktopPane);
         jDesktopPane.setLayout(jDesktopPaneLayout);
         jDesktopPaneLayout.setHorizontalGroup(jDesktopPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addComponent(btnAtualizar, GroupLayout.DEFAULT_SIZE, 473, Short.MAX_VALUE)
-            .addComponent(btnAtulizar1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(0, 750, Short.MAX_VALUE)
         );
         jDesktopPaneLayout.setVerticalGroup(jDesktopPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(jDesktopPaneLayout.createSequentialGroup()
-                .addComponent(btnAtualizar, GroupLayout.PREFERRED_SIZE, 13, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 508, Short.MAX_VALUE)
-                .addComponent(btnAtulizar1, GroupLayout.PREFERRED_SIZE, 13, GroupLayout.PREFERRED_SIZE))
+            .addGap(0, 430, Short.MAX_VALUE)
         );
 
-        jPanel3.setBorder(BorderFactory.createTitledBorder(null, "DELETAR:", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, new Font("Tahoma", 1, 12))); // NOI18N
+        getContentPane().add(jDesktopPane);
+        jDesktopPane.setBounds(260, 100, 750, 430);
+
+        jLabel5.setIcon(new ImageIcon(getClass().getResource("/br/com/safePark/midia/logo.png"))); // NOI18N
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(30, 10, 110, 67);
 
         jButton13.setIcon(new ImageIcon(getClass().getResource("/br/com/safePark/midia/Deletar Clientes.png"))); // NOI18N
-        jButton13.setText("CLIENTE                 ");
+        jButton13.setText("CLIENTE");
         jButton13.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 jButton13ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton13);
+        jButton13.setBounds(670, 540, 160, 60);
 
         jButton14.setIcon(new ImageIcon(getClass().getResource("/br/com/safePark/midia/Deletar Cidade.png"))); // NOI18N
         jButton14.setText("ESTACIONAMENTO");
@@ -252,6 +234,8 @@ public class SF_PARK extends javax.swing.JFrame {
                 jButton14ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton14);
+        jButton14.setBounds(260, 540, 200, 60);
 
         jButton15.setIcon(new ImageIcon(getClass().getResource("/br/com/safePark/midia/Deletar Veiculos.png"))); // NOI18N
         jButton15.setText("VEICULO                ");
@@ -260,125 +244,57 @@ public class SF_PARK extends javax.swing.JFrame {
                 jButton15ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton15);
+        jButton15.setBounds(470, 540, 188, 60);
 
         jButton9.setIcon(new ImageIcon(getClass().getResource("/br/com/safePark/midia/Estoque.png"))); // NOI18N
-        jButton9.setText("Meus Dados       ");
+        jButton9.setText("Minha conta");
         jButton9.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 jButton9ActionPerformed(evt);
             }
         });
-
-        jLabel4.setFont(new Font("Tahoma", 1, 12)); // NOI18N
-        jLabel4.setText("DADOS CADASTRAIS:");
-
-        jLabel6.setFont(new Font("Tahoma", 1, 12)); // NOI18N
-        jLabel6.setText("CADASTRAR NOVO");
-
-        jLabel7.setFont(new Font("Tahoma", 1, 12)); // NOI18N
-        jLabel7.setText("FUNCIONARIO:");
+        getContentPane().add(jButton9);
+        jButton9.setBounds(850, 10, 160, 60);
 
         jButton11.setIcon(new ImageIcon(getClass().getResource("/br/com/safePark/midia/Cadastrar atendente.png"))); // NOI18N
-        jButton11.setText("Novo Funcionario");
+        jButton11.setText("ADD Operador");
         jButton11.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 jButton11ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton11);
+        jButton11.setBounds(840, 540, 170, 60);
 
-        GroupLayout jPanel3Layout = new GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton9, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jSeparator3)
-                    .addGroup(GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                        .addComponent(jLabel4, GroupLayout.Alignment.LEADING)
-                        .addGroup(GroupLayout.Alignment.LEADING, jPanel3Layout.createParallelGroup(GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jButton15, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton13, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton14, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addComponent(jSeparator7, GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel7))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jButton11, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-        jPanel3Layout.setVerticalGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jButton13)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton15)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton14)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSeparator3, GroupLayout.PREFERRED_SIZE, 10, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton9)
-                .addGap(18, 18, 18)
-                .addComponent(jSeparator7, GroupLayout.PREFERRED_SIZE, 10, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel7)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton11)
-                .addContainerGap(56, Short.MAX_VALUE))
-        );
+        jLabel3.setFont(new Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setText("Bem vindo(a):");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(260, 10, 110, 20);
 
-        jSeparator4.setOrientation(SwingConstants.VERTICAL);
+        jLabel8.setFont(new Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel8.setText("@Name");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(260, 30, 160, 20);
 
-        jSeparator5.setOrientation(SwingConstants.VERTICAL);
+        btnAtualizar.setFont(new Font("Tahoma", 1, 10)); // NOI18N
+        btnAtualizar.setText("ATUALIZAR ESTOQUE");
+        btnAtualizar.setAlignmentY(0.0F);
+        btnAtualizar.setIconTextGap(0);
+        btnAtualizar.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                btnAtualizarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnAtualizar);
+        btnAtualizar.setBounds(260, 80, 750, 20);
 
-        jLabel5.setIcon(new ImageIcon(getClass().getResource("/br/com/safePark/midia/logo.png"))); // NOI18N
+        jLabel2.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel2.setIcon(new ImageIcon(getClass().getResource("/br/com/safePark/midia/backgound2.png"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, -40, 1030, 840);
 
-        GroupLayout layout = new GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator6)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSeparator5, GroupLayout.PREFERRED_SIZE, 6, GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jDesktopPane, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jSeparator4, GroupLayout.PREFERRED_SIZE, 11, GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel5)))
-                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel5, GroupLayout.PREFERRED_SIZE, 67, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator6, GroupLayout.PREFERRED_SIZE, 10, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator4, GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jDesktopPane, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(22, Short.MAX_VALUE))
-                    .addComponent(jSeparator5)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))))
-        );
-
-        setSize(new Dimension(973, 681));
+        setSize(new Dimension(1043, 650));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -424,7 +340,12 @@ public class SF_PARK extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton11ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        // TODO add your handling code here:
+        
+       CadastrarUsuario c = new CadastrarUsuario();
+       jDesktopPane.add(c);
+       c.show();
+        
+        
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton9ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
@@ -449,13 +370,6 @@ public class SF_PARK extends javax.swing.JFrame {
         jDesktopPane.add(ce);
         ce.show();
     }//GEN-LAST:event_btnAtualizarActionPerformed
-
-    private void btnAtulizar1ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_btnAtulizar1ActionPerformed
-        // TODO add your handling code here:
-        AtualizarStatus_E_pesquisarVeiculos ce = new AtualizarStatus_E_pesquisarVeiculos();
-        jDesktopPane.add(ce);
-        ce.show();
-    }//GEN-LAST:event_btnAtulizar1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -497,7 +411,6 @@ public class SF_PARK extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private JButton btnAtualizar;
-    private JButton btnAtulizar1;
     private JButton jButton11;
     private JButton jButton13;
     private JButton jButton14;
@@ -511,18 +424,12 @@ public class SF_PARK extends javax.swing.JFrame {
     private JButton jButton9;
     private JDesktopPane jDesktopPane;
     private JLabel jLabel1;
-    private JLabel jLabel4;
+    private JLabel jLabel2;
+    private JLabel jLabel3;
     private JLabel jLabel5;
-    private JLabel jLabel6;
-    private JLabel jLabel7;
+    private JLabel jLabel8;
     private JPanel jPanel1;
-    private JPanel jPanel3;
     private JSeparator jSeparator1;
     private JSeparator jSeparator2;
-    private JSeparator jSeparator3;
-    private JSeparator jSeparator4;
-    private JSeparator jSeparator5;
-    private JSeparator jSeparator6;
-    private JSeparator jSeparator7;
     // End of variables declaration//GEN-END:variables
 }

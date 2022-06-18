@@ -108,6 +108,11 @@ public class CadastrarCliente extends javax.swing.JInternalFrame {
 
         buttonGroupSexo.add(rbMasculino);
         rbMasculino.setText("Masculino");
+        rbMasculino.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbMasculinoActionPerformed(evt);
+            }
+        });
 
         buttonGroupSexo.add(rbFeminino);
         rbFeminino.setText("Feminino");
@@ -361,90 +366,6 @@ public class CadastrarCliente extends javax.swing.JInternalFrame {
             
             dao.cadastrar(c);
 		
-        /*
-        
-        Cliente c = new Cliente();
-        
-                
-        
-        String nome = txtNome.getText();
-        c.setNome(nome);
-        
-        
-        
-        c.setCpf(txtCpf.getText());
-        
-        String telefone = txtTelefone.getText();
-        c.setTelefone(telefone);
-        
-        String email = txtEmail.getText();
-        c.setEmail( txtEmail.getText() );
-        
-        String nascimento = txtData.getText();
-        
-        String sDia = txtData.getText().substring(0, 2);
-        String sMes = txtData.getText().substring(3, 5);
-        String sAno = txtData.getText().substring(6, 10);
-        
-        int dia = Integer.valueOf(sDia);
-        int mes = Integer.valueOf(sMes);
-        int ano = Integer.valueOf(sAno);
-        
-        Calendar data = Calendar.getInstance();
-        data.set(ano, mes, dia);
-        
-       // c.setNascimento(data);
-        
-        
-        
-        
-        String sexo = "" ;
-        if( rbMasculino.isSelected() ){
-            sexo = "Masculino";
-            c.setSexo("m");
-        }
-        
-        if( rbFeminino.isSelected() ){
-            sexo = rbFeminino.getText();
-            c.setSexo("f");
-        }
-        
-        String filhos = "";
-        if( cbFilhos.isSelected()){
-            filhos = "Sim";
-            c.setTemFilhos(true);
-        }else{
-            filhos = "Não";
-            c.setTemFilhos(false);
-        }
-        
-        int posicaoSelecionada = cmbCidade.getSelectedIndex();
-        CidadeDao m = listaDeCidades.get(posicaoSelecionada);
-        c.setCidade(m);
-        
-        c.setCidade((CidadeDao) cmbCidade.getSelectedItem() );
-        
-        
-   //     c.setCidade(  cmbCidade.getSelectedItem().getClass() );
-        
-        if( sexo.isEmpty())
-            JOptionPane.showMessageDialog(this, 
-                    "O campo sexo deve ser selecionado!");
-        else{
-            String mensagem = "Nome: " + nome + "\n" +
-                    "Telefone: " + telefone + "\n" +
-                    "E-mail: " + email + "\n" +
-                    "Data de Nascimento: " + nascimento + "\n" +
-                    "Sexo: " + sexo + "\n" +
-                    "Filhos: " + filhos ;
-            ClienteDAO x = new ClienteDAO();
-            x.cadastrar(c);
-            
-            JOptionPane.showMessageDialog(this, mensagem);
-        }
-        
-      
-                */
         
     }//GEN-LAST:event_btnSalvarActionPerformed
 
@@ -469,6 +390,10 @@ public class CadastrarCliente extends javax.swing.JInternalFrame {
     private void txtCidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCidadeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCidadeActionPerformed
+
+    private void rbMasculinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbMasculinoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbMasculinoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
