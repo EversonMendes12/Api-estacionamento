@@ -12,11 +12,11 @@ Sistema possuí um Launcher para atualizações.
 
 Tela de login:
 
-![image](https://user-images.githubusercontent.com/13875554/174421545-038eb15d-3c49-4493-8b26-209a2fee3d58.png)
+![image](https://user-images.githubusercontent.com/13875554/174421588-4856aabc-e5bb-48cf-b9b0-650e5f7665a8.png)
 
 Designer Main:
 
-![Uploading image.png…]()
+![image](https://user-images.githubusercontent.com/13875554/174421554-d74f0395-197c-4b89-8287-7def65807b59.png)
 
 
 
